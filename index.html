@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Notícias por Categoria</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .container {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        canvas {
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Quantidade de Notícias por Categoria</h1>
+        <canvas id="noticiasChart"></canvas>
+    </div>
+
+    <script>
+        // Dados simulados em formato JSON
+        const dadosNoticias = [
+            { "categoria": "Política", "quantidade": 15 },
+            { "categoria": "Economia", "quantidade": 20 },
+            { "categoria": "Cultura", "quantidade": 8 },
+            { "categoria": "Esportes", "quantidade": 25 }
+        ];
+
+        // Preparando os dados para o Chart.js
+        const categorias = dadosNoticias.map(item => item.categoria);
+        const quantidades = dadosNoticias.map(item => item.quantidade);
+
+        // Configuração do gráfico
+        const ctx = document.getElementById('noticiasChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: categorias,
+                datasets: [{
+                    label: 'Quantidade de Notícias',
+                    data: quantidades,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.7)',
+                        'rgba(54, 162, 235, 0.7)',
+                        'rgba(255, 206, 86, 0.7)',
+                        'rgba(75, 192, 192, 0.7)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Quantidade de Notícias'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Categorias'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html> 
