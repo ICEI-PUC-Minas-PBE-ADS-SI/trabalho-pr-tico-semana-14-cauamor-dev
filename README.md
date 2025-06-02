@@ -1,22 +1,29 @@
-Aluno: Cauã Moreira Martins
-Matrícula: 00878733-
 
+# Trabalho Prático - Semana 14
 
+A partir dos dados cadastrados na etapa anterior, vamos trabalhar formas de apresentação que representem de forma clara e interativa as informações do seu projeto. Você poderá usar gráficos (barra, linha, pizza), mapas, calendários ou outras formas de visualização. Seu desafio é entregar uma página Web que organize, processe e exiba os dados de forma compreensível e esteticamente agradável.
 
-Nesta etapa, foi criada uma nova página HTML com o objetivo de apresentar dinamicamente os dados do portal de notícias através de um gráfico de barras. Para isso, utilizamos a biblioteca Chart.js, que foi importada via CDN.
+Com base nos tipos de projetos escohidos, você deve propor **visualizações que estimulem a interpretação, agrupamento e exibição criativa dos dados**, trabalhando tanto a lógica quanto o design da aplicação.
 
-O gráfico exibe a quantidade de notícias por categoria, como política, economia, cultura e esportes. Os dados foram organizados em um array JSON simulado e processados com JavaScript, permitindo a geração automática do gráfico conforme os dados disponíveis.
+Sugerimos o uso das seguintes ferramentas acessíveis: [FullCalendar](https://fullcalendar.io/), [Chart.js](https://www.chartjs.org/), [Mapbox](https://docs.mapbox.com/api/), para citar algumas.
 
-A estrutura do código foi dividida em:
+## Informações do trabalho
 
-Um elemento <canvas> para renderizar o gráfico.
+- Nome: Cauã Moreira Martins
+- Matricula: 00878733-
+- Proposta de projeto escolhida: Portal de Notícias
+- Breve descrição sobre seu projeto: Portal de Notícias Puc News
 
-Um script que carrega os dados JSON.
+**Print da tela com a implementação**
 
-A configuração do Chart.js para montar o gráfico de barras.
+<< Nesta etapa, foi criada uma nova página HTML (graficos.html) para apresentar visualmente os dados do portal de notícias de forma dinâmica e interativa.
 
-A implementação também permite facilmente a substituição dos dados para testes com diferentes cenários, o que possibilitou a criação de dois prints distintos da funcionalidade, como solicitado na atividade.
+Utilizei a biblioteca Chart.js para gerar um gráfico de barras, que exibe a quantidade de notícias por categoria (como Política, Economia, Cultura, Esportes, entre outras). Os dados utilizados foram simulados com base nas informações cadastradas anteriormente por meio da funcionalidade de CRUD.
 
-![alt text](Screenshot_22.png)
+O gráfico é responsivo, possui título e cores distintas para facilitar a compreensão. Também foram realizados testes com dois conjuntos diferentes de dados, e os resultados foram documentados por meio de capturas de tela (prints), incluídas no README.md.
 
-![alt text](Screenshot_23.png)
+Essa visualização permite ao usuário interpretar facilmente a distribuição de notícias por categoria, unindo lógica, dados em JSON e design visual para enriquecer a experiência do projeto. >>
+
+<< ![alt text](Screenshot_22.png) >>
+
+<< ![alt text](Screenshot_23.png) >>
